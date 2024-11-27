@@ -1,0 +1,28 @@
+{
+  "name": "lms-server",
+  "version": "1.0.0",
+  "author": "esau-morais",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "ts-node-dev ./src/main.ts",
+    "lint": "biome format --write ./src",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^5.1.0",
+    "joi": "^17.13.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.0",
+    "@types/nodemon": "^1.19.6",
+    "@types/pino": "^7.0.5",
+    "prisma": "^5.22.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.2"
+  }
+}
