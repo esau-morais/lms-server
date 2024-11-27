@@ -7,6 +7,10 @@
     "build": "tsc -p tsconfig.json",
     "dev": "ts-node-dev ./src/main.ts",
     "lint": "biome format --write ./src",
+    "db:gen": "prisma generate",
+    "db:studio": "prisma studio",
+    "migrate": "prisma migrate dev",
+    "migrate:prod": "prisma migrate deploy",
     "start": "node dist/main.js"
   },
   "dependencies": {

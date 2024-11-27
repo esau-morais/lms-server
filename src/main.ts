@@ -1,5 +1,5 @@
-import fastify from "fastify";
-import { loadConfig } from "./config/env";
+import fastify from 'fastify';
+import { loadConfig } from './config/env';
 
 loadConfig();
 
@@ -11,7 +11,7 @@ const init = async () => {
     logger: true,
   });
 
-  const signals: NodeJS.Signals[] = ["SIGINT", "SIGTERM"];
+  const signals: NodeJS.Signals[] = ['SIGINT', 'SIGTERM'];
   signals.forEach((signal) => {
     process.on(signal, async () => {
       try {
@@ -33,8 +33,8 @@ const init = async () => {
   }
 };
 
-process.on("unhandledRejection", (err) => {
-  console.error("unhandledRejection: ", err);
+process.on('unhandledRejection', (err) => {
+  console.error('unhandledRejection: ', err);
   process.exit(1);
 });
 
